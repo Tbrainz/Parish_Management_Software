@@ -1,0 +1,46 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link
+  rel="stylesheet"
+  href="{% static 'bootstrap-icons/bootstrap-icons.css' %}"
+/>
+<link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-img">
+      <img src="{% static 'images/abjlogo.JPG' %}" alt="" />
+    </div>
+
+    <div class="logo-text">
+      <h5>Catholic Archdiocese of Abuja</h5>
+      <h3>St. Joseph the Worker Parish</h3>
+    </div>
+  </div>
+  <nav class="nav1">
+    <!-- hamburger -->
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="bi bi-justify"></i>
+    </label>
+    <ul class="ul">
+      <li class="li">
+        <a href="{% url 'core:home' %}" class="">Home</a>
+      </li>
+      <li class="li"><a href="{% url 'core:ppc' %}">PPC</a></li>
+      <li class="li"><a href="{% url 'core:about' %}">About</a></li>
+      <li class="li"><a href="{% url 'core:gallery' %}">Gallery</a></li>
+      <li class="li"><a href="{% url 'core:events' %}">Events</a></li>
+      <li class="li"><a href="{% url 'core:contact' %}">Contact</a></li>
+      {% if request.user.is_authenticated %}
+      <li class="li" id="logBtn">
+        <a href="{% url 'account:logout' %}">Logout</a>
+      </li>
+      {% else %}
+      <li class="li" id="logBtn">
+        <a href="{% url 'account:login' %}">Login</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>

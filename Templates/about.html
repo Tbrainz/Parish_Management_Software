@@ -1,0 +1,115 @@
+{% extends 'layout.html' %} {% load static %}
+<!-- loading static -->
+{% block title %}
+<title>About Page</title>
+{% endblock %}
+<!-- title -->
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
+
+<!-- welcome block -->
+{% block welcome %} About {% endblock %}
+<!-- welome-alt -->
+{% block welcome-alt %} About {% endblock %}
+<!-- begining content -->
+{% block content %}
+
+<!-- history -->
+
+<div class="history" id="history">
+  <div class="history-text">
+    <h2>Parish History</h2>
+    <p>
+      The Catholic Archdiocese of Abuja provides a broad range of services to
+      the community of the FCT, including spiritual formation and guidance,
+      evangelization, education, healthcare and social protection. It also
+      focuses on training lay leaders and promoting ecumenical dialogue and
+      understanding among different Christian denominations.This beautiful
+      church in Nigeria has made a lot of significance in the past. Explore
+      Nigeria most popular tourist destination with us. Catholic Archdiocese of
+      Abuja In Nigeria: History,Facts, & Services,which is 0 km away from
+      Nigeria main town, is the most popular destination to add in your travel
+      wishlist.
+    </p>
+  </div>
+
+  <div class="history-img"></div>
+</div>
+
+<!-- mission and vision -->
+<div class="vi-mi">
+  <div class="mission">
+    <h2>Mission</h2>
+    <p>
+      The Catholic Archdiocese of Abuja provides a broad range of services to
+      the community of the FCT, including spiritual formation and guidance,
+      evangelization, education, healthcare and social protection. It also
+      focuses on training lay leaders and promoting ecumenical dialogue and
+      understanding among different Christian denominations.This beautiful
+      church in Nigeria has made a lot of significance in the past
+    </p>
+  </div>
+  <div class="vision">
+    <h2>Vision</h2>
+    <p>
+      Explore Nigeria most popular tourist destination with us. Catholic
+      Archdiocese of Abuja In Nigeria: History,Facts, & Services,which is 0 km
+      away from Nigeria main town, is the most popular destination to add in
+      your travel wishlist. understanding among different Christian
+      denominations.This beautiful church in Nigeria has made a lot of
+      significance in the past.
+    </p>
+  </div>
+</div>
+
+<!-- ongoing projects -->
+<div class="ongoing-p">
+  <div class="ongoing-p-head">
+    <h2>Ongoing Projects in the Parish</h2>
+    <p>
+      We solicit your support for the following projects. The are in real need
+      by the parish and will facilitate in small measure the general runing of
+      the Parish and the welfare of our Parishioners
+    </p>
+  </div>
+  <!-- project1 -->
+  <div class="pro-1">
+    <div class="pro-text">
+      <h2>Chapel of Adoration</h2>
+      <h6></h6>
+      <p>
+        We solicit your support for the completion of You can send out your
+        letters to both corporate partners and donors who have a relationship
+        with your nonprofit. If you’re looking for items or experiences to get
+        the word out and put biddable items on the auction block.
+      </p>
+    </div>
+    <div class="pro-img">
+      <a href="{% static 'images/foundation7.JPG' %}">
+        <img src="{% static 'images/foundation7.JPG' %}" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <!-- project2 -->
+  <div class="pro-1 pro-2">
+    <div class="pro-text">
+      <h2>Concencration of Auxilary Bishop of Calabar</h2>
+      <h6></h6>
+      <p>
+        The Auxilary bishop of Calabar Archdiocese will be Concencrated
+        late this year, the date and shedule of activities shall be communicated 
+        to us as they unfold. We therefore solicit for funds to carry out thi special occassion
+      </p>
+    </div>
+    <div class="pro-img">
+      <a href="{% static 'images/ordination1.JPG' %}">
+        <img src="{% static 'images/ordination1.JPG' %}" alt="" />
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

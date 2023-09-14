@@ -1,0 +1,287 @@
+{% extends 'layout.html' %}
+<!-- loading static -->
+{% load static %}
+<!-- loading static -->
+{% block title %}
+<title>Admin Page</title>
+{% endblock %}
+<!-- end -->
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" />
+<!-- using carousel style because of the events div -->
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<!-- using index style because of the welcome div -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+{% endblock %}
+<!-- welcome block -->
+{% block welcome %} Admin {% endblock %}
+<!-- welome-alt -->
+{% block welcome-alt %} Admin {% endblock %}
+<!-- begining content -->
+{% block content %}
+
+<!-- parish dignitaries -->
+<div class="parish-d">
+  <!-- first row -->
+  <div class="laity1">
+    <div class="laity-card">
+      <h2>President Laity</h2>
+      <a href="{% static 'images/cletus.JPG' %}">
+        <img src="{% static 'images/cletus.JPG' %}" alt=""
+      /></a>
+      <h4>Fr Cletus SPS</h4>
+    </div>
+
+    <div class="laity-card">
+      <h2>President Pastoral</h2>
+      <a href="{% static 'images/re1.JPG' %}">
+        <img src="{% static 'images/re1.JPG' %}" alt=""
+      /></a>
+      <h4>Mrs Rejoice </h4>
+    </div>
+  </div>
+
+  <!-- second row -->
+  <div class="parish-p">
+    <h2>Parish Priest</h2>
+    <a href="{% static 'images/anselm.JPG' %}">
+      <img src="{% static 'images/anselm.JPG' %}" alt=""
+    /></a>
+    <h4>Fr Christopher</h4>
+  </div>
+
+  <!-- third row -->
+  <div class="laity1">
+    <div class="laity-card">
+      <h2>Treasurer Laity</h2>
+      <a href="{% static 'images/re2.JPG' %}">
+        <img src="{% static 'images/re2.JPG' %}" alt=""
+      /></a>
+      <h4>Mrs Akaabo</h4>
+    </div>
+
+    <div class="laity-card">
+      <h2>Secretary Pastoral</h2>
+      <a href="{% static 'images/ignatius.JPG' %}">
+        <img src="{% static 'images/ignatius.JPG' %}" alt=""
+      /></a>
+      <h4>His Lordship</h4>
+    </div>
+  </div>
+</div>
+
+<!-- parish hours -->
+<div class="parish-h" id="oh">
+  <h2>Parish Office Hours</h2>
+  <div class="parish-h-s">
+    <h4>Masses</h4>
+    <div class="mass">
+      <h5>Sundays:</h5>
+      <h5>7am, 9am, 6pm</h5>
+    </div>
+    <!-- row2 -->
+    <div class="mass">
+      <h5>Week days:</h5>
+      <h5>6:30am</h5>
+    </div>
+
+    <!-- row3 -->
+    <div class="mass">
+      <h5>Public Holidays:</h5>
+      <h5>7am</h5>
+    </div>
+  </div>
+  <!-- holy hours -->
+  <div class="parish-h-s">
+    <h4>Holy Hours</h4>
+    <div class="mass">
+      <h5>Saturdays:</h5>
+      <h5>6am</h5>
+    </div>
+    <!-- row2 -->
+    <div class="mass">
+      <h5>Week days:</h5>
+      <h5>6am</h5>
+    </div>
+
+    <!-- row3 -->
+    <div class="mass">
+      <h5>Public Holidays:</h5>
+      <h5>6am</h5>
+    </div>
+  </div>
+
+  <!-- confessions -->
+  <div class="parish-h-s">
+    <h4>Confessions</h4>
+    <!-- row21 -->
+    <div class="mass">
+      <h5>Week days:</h5>
+      <h5>During Holy Hour</h5>
+    </div>
+
+    <!-- row2 -->
+    <div class="mass">
+      <h5>Saturdays:</h5>
+      <h5>5pm</h5>
+    </div>
+  </div>
+
+  <!-- church organizations -->
+  <div class="parish-h-s">
+    <h4>Church Organizations</h4>
+    <div class="mass">
+      <h5>Catholic Men Organisation (CMO):</h5>
+      <h5>Last sunday of the month</h5>
+    </div>
+    <!-- row2 -->
+    <div class="mass">
+      <h5>Catholic Women Organization (CWO):</h5>
+      <h5>Second sunday of the month</h5>
+    </div>
+
+    <!-- row3 -->
+    <div class="mass">
+      <h5>Catholic Youth Organization (CYO)</h5>
+      <h5>First sunday of the month</h5>
+    </div>
+  </div>
+
+  <!-- church societies -->
+  <div class="parish-h-s">
+    <h4>Church Societies</h4>
+    <div class="mass">
+      <h5>Legion of Mary:</h5>
+      <h5>Mon. 5pm</h5>
+    </div>
+    <!-- row2 -->
+    <div class="mass">
+      <h5>Divine Mercy:</h5>
+      <h5>Mon. 5pm</h5>
+    </div>
+
+    <!-- row3 -->
+    <div class="mass">
+      <h5>Purgatorians:</h5>
+      <h5>Tue. 5pm</h5>
+    </div>
+    <!-- row4 -->
+    <div class="mass">
+      <h5>St. Anthony of Padua:</h5>
+      <h5>Tue. 5pm</h5>
+    </div>
+    <!-- row5 -->
+    <div class="mass">
+      <h5>Block Rosary:</h5>
+      <h5>Tue. 5pm</h5>
+    </div>
+
+    <!-- row6 -->
+    <div class="mass">
+      <h5>Pro-life:</h5>
+      <h5>Tue. 5pm</h5>
+    </div>
+    <!-- row7 -->
+    <div class="mass">
+      <h5>Precious Blood of Jesus:</h5>
+      <h5>Thur. 5pm</h5>
+    </div>
+    <!-- row8 -->
+    <div class="mass">
+      <h5>St. Patrick's Choir:</h5>
+      <h5>Tue. Thur. Sat. 5pm</h5>
+    </div>
+
+    <!-- row9 -->
+    <div class="mass">
+      <h5>Patrithian Theatre:</h5>
+      <h5>Mon. Sun 4pm</h5>
+    </div>
+
+    <!-- row10 -->
+    <div class="mass">
+      <h5>Corpus Christi Choir:</h5>
+      <h5>Wed. 5pm, Fri. 4pm, Sat. 4pm</h5>
+    </div>
+
+    <!-- row11 -->
+    <div class="mass">
+      <h5>St. Jude:</h5>
+      <h5>Wed. 5pm</h5>
+    </div>
+
+    <!-- row12 -->
+    <div class="mass">
+      <h5>JDPC:</h5>
+      <h5>Wed. 5pm</h5>
+    </div>
+
+    <!-- row13 -->
+    <div class="mass">
+      <h5>Altar Boys:</h5>
+      <h5>Wed. 4pm</h5>
+    </div>
+
+    <!-- row14 -->
+    <div class="mass">
+      <h5>Sacred Heart:</h5>
+      <h5>Thur. 5pm</h5>
+    </div>
+
+    <!-- row15 -->
+    <div class="mass">
+      <h5>St. Vincent De Paul:</h5>
+      <h5>Thur. 5pm</h5>
+    </div>
+
+    <!-- row16 -->
+    <div class="mass">
+      <h5>Mary League Girls:</h5>
+      <h5>Thur. 5pm</h5>
+    </div>
+
+    <!-- row17 -->
+    <div class="mass">
+      <h5>Lay Readers:</h5>
+      <h5>Fri. 5pm</h5>
+    </div>
+
+    <!-- row18 -->
+    <div class="mass">
+      <h5>Fatima Association:</h5>
+      <h5>Sat. 5pm</h5>
+    </div>
+
+    <!-- row19 -->
+    <div class="mass">
+      <h5>Pages of the Blessed Sacrament:</h5>
+      <h5>Sun. 3pm</h5>
+    </div>
+
+    <!-- row20 -->
+    <div class="mass">
+      <h5>AMSP:</h5>
+      <h5>Monthly</h5>
+    </div>
+
+    <!-- row21 -->
+    <div class="mass">
+      <h5>Ministers of Hospitality:</h5>
+      <h5>Monthly</h5>
+    </div>
+
+    <!-- row22 -->
+    <div class="mass">
+      <h5>Friends of St. Patrick:</h5>
+      <h5>Monthly</h5>
+    </div>
+
+    <!-- row23 -->
+    <div class="mass">
+      <h5>Sancta Maria Choir:</h5>
+      <h5>Tue. Thur. Sat. 4pm</h5>
+    </div>
+  </div>
+</div>
+{% endblock %}

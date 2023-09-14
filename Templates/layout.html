@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} {% endblock %} {% block style %}
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap-icons/bootstrap-icons.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/csss/bootstrap.min.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/stjoseph.JPG' %}"
+      type="image/x-icon"
+    />
+
+    {% endblock %}
+    <!-- extra style for other pages -->
+    {% block extrastyle %} {% endblock %}
+  </head>
+  <body>
+    <!-- header -->
+    {% include 'header.html' %}
+
+    <!-- main -->
+    <main class="main">
+      <div class="sidebar">
+        <div class="sidebar-content">
+          <h2>More Links</h2>
+          <ul class="sidebar-ul">
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'account:logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'account:login' %}">Login</a></li>
+            {% endif %}
+            <li><a href="{% url 'core:ppc' %}">Parish Administration</a></li>
+            <li><a href="{% url 'core:about' %}">Parish History</a></li>
+            <li><a href="">Donation & Charity</a></li>
+            <li><a href="{% url 'core:ppc' %}">Office Hours</a></li>
+            <li><a href="{% url 'profiles:dashboard' %}">Mass Bookings</a></li>
+            <li><a href="">Vatican News</a></li>
+          </ul>
+        </div>
+      </div>
+{% block hideContent %}
+<!-- this is ment to hide the div below as hidden in profiles page -->
+      <div class="content">
+        {% if request.user.is_authenticated %}
+        <!-- when user is authenticated -->
+        <div class="wel-accnt">
+          <!-- welcome block -->
+          <div class="welcome">
+            <!-- this block is intended to dispense the welcome div details and create a Tab -->
+            {% block profiles %}
+            <!-- div for welcome -->
+            <h3>{% block welcome %} {% endblock %}</h3>
+            <p>Parish Account: 2222222222. Fidelity Bank</p>
+            {% endblock %}
+          </div>
+
+          <!-- div for account details -->
+          <div class="account-d">
+            <div class="account-d-img">
+               {% if request.user.profilemodel.image %}
+              <a href="{{request.user.profilemodel.image.url}}">
+                <img src="{{request.user.profilemodel.image.url}}" alt="" />
+              </a>
+              {% else %}
+              <a href="{% static 'images/avatar.png' %}">
+                <img src="{% static 'images/avatar.png' %}" alt="" />
+              </a>
+              {% endif %}
+            </div>
+
+            <div class="account-d-btn">
+              <h3>Welcome <br />{{request.user.username}}</h3>
+             
+              <a  href="{% url 'profiles:profile' request.user.profilemodel.id %}"><button class="btn btn-success">Profile</button></a>
+              {% if user.is_superuser %}
+                  <a  href="{% url 'profiles:register' %}"><button class="btn btn-success">Register</button></a>
+              {% endif %}
+              
+            </div>
+          </div>
+        </div>
+
+        {% else %}
+
+        <!-- welcome-alt block -->
+        <div class="welcome-alt">
+          <!-- div for welcome -->
+          <h3>{% block welcome-alt %} {% endblock %}</h3>
+          <p>Parish Account: 2222222222. Fidelity Bank</p>
+        </div>
+        
+
+        {% endif %}
+        <!-- ending block to hide contents -->
+        {% endblock %}
+        {% block content %}
+        <!-- where all contents for each page fall -->
+        {% endblock %}
+
+        <!-- events -->
+        {% block events %}
+        <div class="events-wrap">
+          <div class="brief-event">
+            <div class="event-text">
+              <h2>Upcoming Events</h2>
+              <p>
+                This runs in summary yet concised the Upcoming
+                events and or major happenings in the parish as stated
+                on each card's date and time.
+              </p>
+
+              <div class="hidden-events">
+                <li><a href="">Ordination</a></li>
+                <li><a href="">Women Talent</a></li>
+                <li><a href="">Harvest Thanksgiving</a></li>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div
+                id="carouselExampleCaptions"
+                class="carousel slide my-style bg-success"
+                data-bs-ride="carousel"
+                style="z-index: -1"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  >
+                    1
+                  </button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  >
+                    2
+                  </button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  >
+                    3
+                  </button>
+                </div>
+                <div class="carousel-inner w-100">
+                  <div class="carousel-item active w-100">
+                    <img
+                      src="{% static 'images/ordination2.JPG' %}"
+                      class="d-block"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block e-text">
+                      <h5>Ordination</h5>
+                      <p>There shall be Ordination in the Parish ...</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item w-100">
+                    <img
+                      src="{% static 'images/children1.JPG' %}"
+                      class="d-block"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block e-text">
+                      <h5>WOMEN TALENT</h5>
+                      <p>There shall be women talent ...</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item w-100">
+                    <img
+                      src="{% static 'images/choir2.JPG' %}"
+                      class="d-block"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block e-text">
+                      <h5>HARVEST</h5>
+                      <p>There shall be Harvest and Thanksgiving ...</p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon bg-success"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon bg-success"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="events-btn">
+            <a href="{% url 'core:events' %}">Get More Details</a>
+          </div>
+        </div>
+        {% endblock %}
+        <!-- social media handles -->
+        <div class="social-media">
+          <div class="media-icons">
+            <h4>Social Media Handles</h4>
+
+            <!-- facebook -->
+            <a
+              class="btn btn-primary"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+            >
+              <i class="bi bi-facebook"></i> <span>Facebook</span></a
+            >
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-primary"
+              style="background-color: #55acee"
+              href="#!"
+              role="button"
+              ><i class="bi bi-twitter"> </i><span>Twitter</span></a
+            >
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-secondary"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i> <span>Instagram</span></a
+            >
+
+            <!-- Youtube -->
+            <a
+              class="btn btn-danger"
+              style="background-color: #ed302f"
+              href="#!"
+              role="button"
+              ><i class="bi bi-youtube"></i> <span>Youtube</span></a
+            >
+
+            <!-- Whatsapp -->
+            <a
+              class="btn btn-success"
+              style="background-color: #25d366"
+              href="#!"
+              role="button"
+              ><i class="bi bi-whatsapp"></i> <span>Whatsapp</span></a
+            >
+          </div>
+        </div>
+
+        <footer class="footer">
+          <h5>gerard devops @stjosephtheworkerparish all rights reserved</h5>
+        </footer>
+      </div>
+    </main>
+
+    <!-- javascript tags -->
+    <script src="{% static 'bootstrap/jss/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

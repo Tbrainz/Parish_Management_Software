@@ -1,0 +1,221 @@
+{% extends 'layout.html' %}
+<!-- loading static -->
+{% load static %}
+<!-- loading static -->
+{% block title %}
+<title>Profiles</title>
+{% endblock %} {% block extrastyle %}
+<!-- using carousel style because of the events div -->
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<!-- using index style because of the gallery in index page  -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+{% endblock %}
+<!-- begining content -->
+
+{% include 'messages.html' %}
+{% block profiles %}
+<div class="pro-tap" style="background-color: white; border-radius: 10px">
+  <!-- ul for tabs -->
+  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link active"
+        href="#contacts"
+        id="contacts-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#contacts"
+        role="tab"
+        aria-controls="contacts"
+        aria-selected="true"
+        >Parish Contacts</a
+      >
+    </li>
+    <li class="nav-item dropdown" role="presentation">
+      <a
+        class="nav-link dropdown-toggle"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-expanded="false"
+        >Announcements</a
+      >
+      <ul class="dropdown-menu">
+        <li role="presentation">
+          <a
+            class="dropdown-item"
+            class="nav-link"
+            href="#make"
+            id="make-ann-tab"
+            id="make-ann-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#make"
+            role="tab"
+            aria-controls="make"
+            aria-selected="false"
+            >Make Announcements</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            class="dropdown-item"
+            href="#view"
+            class="nav-link"
+            id="view-ann-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#view"
+            role="tab"
+            aria-controls="view"
+            aria-selected="false"
+            >View Announcements</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        href="#book"
+        id="book-mass-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#book"
+        role="tab"
+        aria-controls="book"
+        aria-selected="false"
+        >Book Mass</a
+      >
+    </li>
+  </ul>
+</div>
+{% endblock %}
+<!-- welome-alt -->
+
+<!-- contents -->
+{% block content %}
+
+<div class="profile-contents" style="width: 90%; margin:30px auto;  padding:10px; ">
+  <div class="tab-content">
+    <div
+      class="tab-pane fade active show"
+      id="contact"
+      role="tabpanel"
+      aria-labelledby="contacts-tab"
+    >
+
+      <!-- table -->
+       <h3 class="text-success text-center">Contact Details</h3>
+      <table class="table table-hover" style="padding: 5px 10px">
+        <thead>
+        <tr>
+           <th scope="col">S/N</th>
+          <th scope="col">Full Name</th>
+          <th scope="col">Phone Number</th>
+           <th scope="col">Email</th>
+        </tr>
+        </thead>
+        {% for profile in profiles %}
+        <tbody>
+        <tr>
+          <td scope="row">{{profile.id}}</td>
+          <td>{{profile.full_name}}</td>
+
+          <td>{{profile.number}}</td>
+
+          <td>{{request.user.email}}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+      <!-- contacts  -->
+    </div>
+    <div
+      class="tab-pane fade"
+      id="make"
+      role="tabpanel"
+      aria-labelledby="make-ann-tab"
+    >
+      <!-- example of my annForm -->
+      <div class="container w-100 m-auto">
+        <!-- form -->
+        <h3 class="text-success">Make Announcements</h3>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">{{annForm.organization}}</div>
+
+        <div class="form-group">{{annForm.date}}</div>
+
+        <div class="form-group">{{annForm.announcement}}</div>
+     
+         <div class="form-group">
+            <input class="btn btn-success w-25 " type="submit" value="Submit" />
+          </div>
+      </form>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="view"
+      role="tabpanel"
+      aria-labelledby="view-ann-tab"
+    >
+     <h3 class="text-success text-center">Announcements </h3>
+       <table class="table table-hover" style="padding: 5px 10px">
+        <thead>
+        <tr>
+           <th scope="col">S/N</th>
+          <th scope="col">Organisation</th>
+          <th scope="col">Date</th>
+           <th scope="col">Announcements</th>
+        </tr>
+        </thead>
+        {% for announcements in annModel %}
+        <tbody>
+        <tr>
+          <td scope="row">{{announcements.id}}</td>
+          <td>{{announcements.organization}}</td>
+
+          <td>{{announcements.date}}</td>
+
+          <td>{{announcements.announcement}}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+      
+     
+    </div>
+    <div
+      class="tab-pane fade"
+      id="book"
+      role="tabpanel"
+      aria-labelledby="book-mass-tab"
+    >
+      <!-- example of book mass -->
+      <div class="container w-100 m-auto">
+        <form method="post">
+          <h3 class="text-success">Book Mass</h3>
+          {% csrf_token %}
+          <!-- form -->
+          <div class="form-group">{{massBook.name}}</div>
+
+          <div class="form-group">{{massBook.number}}</div>
+
+          <div class="form-group">{{massBook.email}}</div>
+
+          <div class="form-group">
+            <label for="">Thanksgiving</label> {{massBook.thanksgiving}}
+          </div>
+
+          <div class="form-group">{{massBook.intention}}</div>
+
+          <div class="form-group">
+            <input class="btn btn-success w-25 " type="submit" value="Book Mass" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+{% endblock %}

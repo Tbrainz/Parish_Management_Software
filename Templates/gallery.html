@@ -1,0 +1,297 @@
+{% extends 'layout.html' %}
+<!-- loading static -->
+{% load static %}
+
+<!-- loading static -->
+{% block title %}
+<title>Gallery Page</title>
+{% endblock %} {% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+<!-- using carousel style because of the events div -->
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<!-- using index style because of the gallery in index page  -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+{% endblock %}
+<!-- begining content -->
+{% block welcome %}
+<h3>Gallery</h3>
+{% endblock %}
+
+<!-- welome-alt -->
+{% block welcome-alt %} Gallery {% endblock %}
+
+<!-- contents -->
+{% block content %}
+<!-- gallery -->
+<div class="gallery">
+  <div class="gallery-head">
+    <h2>Photos of various Events in the Parish</h2>
+  </div>
+
+  <!-- brief gallery -->
+  <div class="b-gallery">
+    <!-- image1 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/catechemen1.JPG' %}">
+          <img src="{% static 'images/catechemen1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of Catechumens recieving Sacrament</p>
+      </div>
+    </div>
+
+    <!-- image2 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children5.JPG' %}">
+          <img src="{% static 'images/children5.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children having fun on Children's Day</p>
+      </div>
+    </div>
+
+    <!-- image3 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/catechumen2.JPG' %}">
+          <img src="{% static 'images/catechumen2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Catechumen recieving the sacrament</p>
+      </div>
+    </div>
+
+    <!-- image4 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/choir.JPG' %}">
+          <img src="{% static 'images/choir.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of the Parish Choir</p>
+      </div>
+    </div>
+
+    <!-- image5 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children4.JPG' %}">
+          <img src="{% static 'images/children4.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children's Day celebration in the Parish</p>
+      </div>
+    </div>
+
+    <!-- image6 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/priest2.JPG' %}">
+          <img src="{% static 'images/priest2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parish Priest with some CWO members</p>
+      </div>
+    </div>
+
+    <!-- image7 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/choir2.JPG' %}">
+          <img src="{% static 'images/choir2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parish Choir during the Mass</p>
+      </div>
+    </div>
+
+    <!-- image8 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners5.JPG' %}">
+          <img src="{% static 'images/parishioners5.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of Parishioners in the Parish</p>
+      </div>
+    </div>
+
+    <!-- image9 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children1.JPG' %}">
+          <img src="{% static 'images/children1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children's day celebration</p>
+      </div>
+    </div>
+
+    <!-- image10 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children2.JPG' %}">
+          <img src="{% static 'images/children2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children's day celebration</p>
+      </div>
+    </div>
+
+    <!-- image11 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/passion1.JPG' %}">
+          <img src="{% static 'images/passion1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Passion of Christ Celebration</p>
+      </div>
+    </div>
+
+    <!-- image12 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/passion3.JPG' %}">
+          <img src="{% static 'images/passion3.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Palm Sunday Celebration</p>
+      </div>
+    </div>
+
+    <!-- image13 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners.JPG' %}">
+          <img src="{% static 'images/parishioners.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of Parishioners during Liturgy</p>
+      </div>
+    </div>
+
+    <!-- image14 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners1.JPG' %}">
+          <img src="{% static 'images/parishioners1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parishioners during liturgical celebration</p>
+      </div>
+    </div>
+
+    <!-- image15 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/passion2.JPG' %}">
+          <img src="{% static 'images/passion2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Passion play in the Parish</p>
+      </div>
+    </div>
+
+    <!-- image16 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/priest.JPG' %}">
+          <img src="{% static 'images/priest.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of Priests</p>
+      </div>
+    </div>
+
+    <!-- image17 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/ordination2.JPG' %}">
+          <img src="{% static 'images/ordination2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of Priests</p>
+      </div>
+    </div>
+
+    <!-- image18 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/sisters.JPG' %}">
+          <img src="{% static 'images/sisters.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Reverend Sisters during liturgical celebration</p>
+      </div>
+    </div>
+
+    <!-- image19 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners6.JPG' %}">
+          <img src="{% static 'images/parishioners6.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parishioners during liturgical celebration</p>
+      </div>
+    </div>
+
+    <!-- image20 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners7.JPG' %}">
+          <img src="{% static 'images/parishioners7.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parishioners during liturgical celebration</p>
+      </div>
+    </div>
+
+    <!-- image21 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/parishioners8.JPG' %}">
+          <img src="{% static 'images/parishioners8.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Parishioners during liturgical celebration</p>
+      </div>
+    </div>
+    <!-- end of brief-gallery -->
+  </div>
+
+  <div class="gallery-button">
+    <a href="{% url 'core:gallery' %}">Go to Top</a>
+  </div>
+</div>
+{% endblock %}

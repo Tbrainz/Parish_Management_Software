@@ -1,0 +1,82 @@
+#welcome {
+  width: 60%;
+  margin: 0px auto 50px auto;
+}
+/*  gallery */
+.gallery {
+  width: 98%;
+  margin: 30px auto;
+}
+
+.gallery-head {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(19, 91, 49, 0.577);
+}
+
+.gallery-head h2 {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* brief gallery */
+.b-gallery {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.g-card {
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.782);
+  color: white;
+}
+
+.card-img :hover {
+  opacity: 0.8;
+}
+.card-img {
+  width: 100%;
+}
+
+.card-img img {
+  width: 315px;
+}
+
+.card-text {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.card-text p {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
+.gallery-button {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(19, 91, 49, 0.577);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.gallery-button a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.gallery-button a:hover {
+  color: red;
+}

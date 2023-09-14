@@ -1,0 +1,413 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* main */
+.main {
+  width: 100%;
+  margin-top: 140px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+/* sidebar */
+.sidebar {
+  width: 100%;
+  background-color: rgba(6, 112, 6, 0.94);
+  color: white;
+  height: 80vh;
+  overflow: auto;
+}
+
+.sidebar-content {
+  width: 90%;
+  margin: 20px auto;
+  background-color: rgba(19, 91, 49, 0.577);
+  border: 3px solid rgba(255, 255, 255, 0.81);
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+.sidebar-content h2 {
+  margin-top: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sidebar-ul {
+  width: 100%;
+  margin: auto;
+}
+
+.sidebar-ul li {
+  width: 100%;
+  list-style-type: none;
+  margin: 20px 0;
+  margin-left: -17px;
+}
+
+.sidebar-content li a:hover {
+  width: 100%;
+  color: rgb(14, 129, 62);
+  background-color: white;
+}
+
+.sidebar-ul li a {
+  width: 100%;
+  margin: auto;
+  display: block;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.content {
+  width: 97%;
+  margin: auto;
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* wel-accnt */
+
+.wel-accnt {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wel-accnt-alt {
+  display: none;
+}
+
+.content .welcome {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  background-color: rgba(19, 91, 49, 0.731);
+  padding: 7px;
+  border-radius: 20px;
+}
+
+/* welcome-alt style */
+.welcome-alt {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: rgba(19, 91, 49, 0.731);
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.welcome-alt h3,
+.welcome h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  word-spacing: 5px;
+}
+
+.welcome-alt p,
+.welcome p {
+  text-align: center;
+  color: rgb(255, 238, 6);
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+/* acount-d */
+.account-d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  padding: 7px;
+  box-shadow: 0px 2px 3px black;
+}
+
+.account-d-img {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.account-d-img img {
+  width: 60%;
+  border-radius: 48%;
+  height: 150px;
+}
+
+.account-d-btn {
+  width: 50%;
+  margin: auto;
+  margin-left: -55px;
+}
+/* media-icons */
+
+.social-media {
+  width: 100%;
+  margin: 50px auto;
+}
+.media-icons {
+  width: 100%;
+  text-align: center;
+}
+
+.media-icons h4 {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: rgba(36, 118, 84, 0.862);
+  border-radius: 5px;
+  color: white;
+}
+.media-icons > a {
+  margin: 0 10px;
+}
+
+/* Events */
+.events-wrap {
+  width: 100%;
+  margin: auto;
+  margin: 30px auto;
+}
+.brief-event {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-text {
+  width: 25%;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.event-text h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  background-color: rgba(12, 105, 43, 0.725);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.event-text p {
+  text-align: left;
+  font-size: 22px;
+}
+
+.event-card {
+  width: 80%;
+}
+
+.events-btn {
+  width: 98%;
+  margin: auto;
+  background-color: rgba(19, 91, 49, 0.577);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.events-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.events-btn a:hover {
+  color: red;
+}
+
+.e-text {
+  background-color: rgba(119, 159, 119, 0.629);
+}
+
+.e-text p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hidden-events {
+  display: none;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  margin: auto;
+  color: white;
+  background-color: black;
+  margin-bottom: 18px;
+  text-align: center;
+  padding: 3px;
+}
+
+/* responsiveness */
+@media (max-width: 858px) {
+  .main {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* for 400px screens */
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 160%;
+  }
+
+  .logo-img {
+    width: 20%;
+  }
+
+  .logo-text {
+    width: 84%;
+  }
+
+  .logo h5 {
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .logo h3 {
+    margin-top: -5px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  /* .ul {
+    display: none;
+  } */
+
+  .main {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  /* wel-accnt */
+  .wel-accnt {
+    display: block;
+  }
+
+  /* welcome */
+
+  .welcome-alt {
+    width: 100%;
+    margin-right: 0;
+    padding: 3px 5px;
+  }
+
+  .content .welcome {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .welcome h3,
+  .welcome-alt h3 {
+    font-size: 18px;
+  }
+  .content {
+    width: 100%;
+  }
+
+  /* account-d */
+  .account-d {
+    width: 100%;
+    margin-left: 0;
+    padding: 3px 5px;
+  }
+
+  /* media icons */
+  .media-icons a > span {
+    display: none;
+  }
+
+  .media-icons > h4 {
+    width: 70%;
+  }
+
+  /* events */
+
+  .brief-event {
+    display: block;
+  }
+
+  .event-text {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .event-text h2 {
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  .event-text p {
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+
+  .hidden-events {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: block;
+    padding: 5px 0;
+  }
+
+  .hidden-events li {
+    list-style: none;
+  }
+
+  .hidden-events li a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+  }
+
+  .hidden-events li a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .footer {
+    margin-bottom: -18px;
+  }
+}

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+<!-- loading static -->
+{% load static %}
+<!-- loading static -->
+{% block title %}
+<title>Profile Page</title>
+{% endblock %} {% block extrastyle %}
+
+<!-- using carousel style because of the events div -->
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<!-- using index style because of the welcome div -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+{% endblock %}
+
+<!-- welcome block -->
+{% block welcome %}  {% endblock %}
+<!-- welome-alt -->
+{% block welcome-alt %}  {% endblock %}
+<!-- begining content -->
+{% block content %}
+<!-- contact form -->
+  <!-- example of book mass -->
+      <div class="container" style="width: 90%; margin:auto 20px;">
+        <form method="post" enctype="multipart/form-data">
+          <h1 class="text-success">Profile</h1>
+          {% csrf_token %}
+          <!-- form -->
+          
+          <div class="form-group">{{form.full_name.label}}{{form.full_name}}</div>
+
+          <div class="form-group">{{form.number.label}}{{form.number}}</div>
+
+          <div class="form-group">{{form.address.label}}{{form.address}}</div>
+
+          <div class="form-group">{{form.marital_status.label}}{{form.marital_status}}</div>
+
+          <div class="form-group">{{form.tribe.label}}{{form.tribe}}</div>
+
+          <div class="form-group">{{form.occupation.label}}{{form.occupation}}</div>
+
+          <div class="form-group">{{form.societies.label}}{{form.societies}}</div>
+
+          <div class="form-group">{{form.dob.label}}{{form.dob}}</div>
+
+          <div class="form-group">{{form.image.label}}{{form.image}}</div>
+
+
+          <div class="form-group">
+            <input class="btn btn-success w-25 " type="submit" value="Update" />
+          </div>
+        </form>
+      </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,157 @@
+/* header */
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 3px black;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  width: 10%;
+}
+
+.logo-img img {
+  width: 100%;
+}
+
+.logo-text {
+  width: 85%;
+  margin: auto;
+}
+.logo-text h5 {
+  color: rgb(0, 128, 41);
+  font-weight: 500;
+  font-size: 21px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.logo-text h3 {
+  font-weight: 500;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.nav1 {
+  width: 80%;
+}
+
+.ul {
+  width: 100%;
+  float: right;
+  margin-right: 10px;
+}
+
+.li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 5px;
+}
+
+#logBtn {
+  background-color: rgba(8, 190, 26, 0.511);
+  padding: 3px;
+  border-radius: 5px;
+}
+#logBtn:hover {
+  background-color: white;
+}
+a.active-link,
+.li a:hover {
+  border-bottom: 3px solid green;
+  color: black;
+  transition: 0.5s;
+}
+
+.ul .li a {
+  font-size: 21px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.554);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+/* responsiveness */
+@media (max-width: 858px) {
+  .logo {
+    width: 160%;
+  }
+
+  .logo-img {
+    width: 15%;
+  }
+
+  .logo-text {
+    width: 82%;
+  }
+
+  .logo h5 {
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  .logo h3 {
+    margin-top: -5px;
+    font-size: 19px;
+    font-weight: 300;
+  }
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 90px;
+    height: 100vh;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .li {
+    display: block;
+    width: 100%;
+    margin: 50px auto;
+    line-height: 30px;
+  }
+
+  .li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .li a:hover,
+  a.active-link {
+    background: none;
+    color: brown;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}

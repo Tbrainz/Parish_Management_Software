@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+<!-- loading static -->
+{% load static %}
+<!-- loading static -->
+{% block title %}
+<title>Register Page</title>
+{% endblock %} {% block extrastyle %}
+<!-- using carousel style because of the events div -->
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+<!-- using index style because of the welcome div -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+{% endblock %}
+
+<!-- welcome block -->
+{% block welcome %} Register {% endblock %}
+<!-- welome-alt -->
+{% block welcome-alt %} Register {% endblock %}
+<!-- begining content -->
+{% block content %}
+<!-- contact form -->
+ <div class="" style="width:50%;  margin:auto; margin-top: 40px; margin-bottom: 50px; ">
+        <!-- form -->
+        <h3 class="text-success">Register New User</h3>
+      <form method="post">
+        {% csrf_token %}
+        
+        <div style="font-size: 25px;">{{form.username.label}}</div>
+        <div >{{form.username}}</div>
+        
+
+        <div style="font-size: 25px;" >{{form.email.label}}</div>
+
+        <div>  {{form.email}}</div>
+
+        <div style="font-size: 25px;">{{form.password1.label}} </div>
+        <div>{{form.password1}}</div>
+
+        <div style="font-size: 25px;">{{form.password2.label}} </div>
+        <div>{{form.password2}}</div>
+
+     
+         <div class="form-group" style="margin-top: 20px;">
+            <input class="btn btn-success w-25 " type="submit" value="Register" />
+          </div>
+      </form>
+      </div>
+
+    
+      
+
+
+{% endblock %}

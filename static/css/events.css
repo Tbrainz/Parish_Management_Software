@@ -1,0 +1,58 @@
+.events {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.events-con {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px black;
+}
+
+.con-text {
+  width: 30%;
+  margin-left: 15px;
+}
+
+.con-text h2,
+h6 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.con-text p {
+  font-size: 21px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.con-img {
+  width: 70%;
+  margin: auto;
+}
+
+.con-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .events-con {
+    display: block;
+  }
+
+  .con-text {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .con-img {
+    width: 100%;
+  }
+}

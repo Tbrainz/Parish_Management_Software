@@ -1,0 +1,182 @@
+{% extends 'layout.html' %}
+<!-- extending layout -->
+{% load static %}
+<!-- style -->
+{% block title %}
+<title>Home Page</title>
+{% endblock %} {% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
+
+<!-- style -->
+{% include 'messages.html' %}
+<!-- welcome block -->
+{% block welcome %} Welcome to the official website of St. Joseph the Worker
+Parish,<br />
+Kugbo, Abuja <br />
+Motto: One Heart and One Mind {% endblock %}
+
+<!-- welome-alt -->
+{% block welcome-alt %} Welcome to the official website of St. Joseph the Worker
+<br />
+Parish, Kugbo, Abuja <br />
+Motto: One Heart and One Mind {% endblock %}
+<!-- content block  -->
+{% block content %}
+
+<!-- including carousel -->
+{% include 'carousel.html' %}
+
+<!-- parish priest -->
+<div class="parish-priest">
+  <div class="img">
+    <a href="{% static 'images/ignatius.JPG' %}">
+      <img src="{% static 'images/ignatius.JPG' %}" alt="" />
+    </a>
+  </div>
+  <div class="text">
+    <h2>Parish Priest</h2>
+    <h4>Fr Christopher</h4>
+    <p>
+      His Eminence John Cardinal Onaiyekan was born on January 29th, 1944, in
+      Kabba, Kogi State of Nigeria. Intelligent right from his tender age, he
+      began his Primary School education from 1949-56 at his home town Kabba.
+      formation commenced in Jan. 1963 – June 1965 with Studies of Philosophy at
+      the prestigious SS. Peter and Paul Major Seminary Bodija, Ibadan Nigeria
+      and from Sept. 1965 – June 1969 studied Theology at the Pontifical Urban
+      College of Propaganda Fide, Rome.
+    </p>
+  </div>
+</div>
+
+<!-- parish history -->
+<div class="history">
+  <h2>Parish History</h2>
+  <p>
+    The Catholic Archdiocese of Abuja provides a broad range of services to the
+    community of the FCT, including spiritual formation and guidance,
+    evangelization, education, healthcare and social protection. It also focuses
+    on training lay leaders and promoting ecumenical dialogue and understanding
+    among different Christian denominations.This beautiful church in Nigeria has
+    made a lot of significance in the past. Explore Nigeria most popular tourist
+    destination with us. Catholic Archdiocese of Abuja In Nigeria:
+    History,Facts, & Services,which is 0 km away from Nigeria main town, is the
+    most popular destination to add in your travel wishlist.
+  </p>
+</div>
+
+<!-- mission and vision -->
+<div class="vi-mi">
+  <div class="mission">
+    <h2>Mission</h2>
+    <p>
+      The Catholic Archdiocese of Abuja provides a broad range of services to
+      the community of the FCT, including spiritual formation and guidance,
+      evangelization, education, healthcare and social protection. It also
+      focuses on training lay leaders and promoting ecumenical dialogue and
+      understanding among different Christian denominations.This beautiful
+      church in Nigeria has made a lot of significance in the past
+    </p>
+  </div>
+  <div class="vision">
+    <h2>Vision</h2>
+    <p>
+      Explore Nigeria most popular tourist destination with us. Catholic
+      Archdiocese of Abuja In Nigeria: History,Facts, & Services,which is 0 km
+      away from Nigeria main town, is the most popular destination to add in
+      your travel wishlist. understanding among different Christian
+      denominations.This beautiful church in Nigeria has made a lot of
+      significance in the past.
+    </p>
+  </div>
+</div>
+
+<!-- gallery -->
+<div class="gallery">
+  <div class="gallery-head">
+    <h2>Brief Photos</h2>
+  </div>
+
+  <!-- brief gallery -->
+  <div class="b-gallery">
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/ordination1.JPG' %}">
+          <img src="{% static 'images/ordination1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of priests at an event in the Parish</p>
+      </div>
+    </div>
+
+    <!-- image2 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/ordination2.JPG' %}">
+          <img src="{% static 'images/ordination2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Cross section of priests at an event in the Parish</p>
+      </div>
+    </div>
+
+    <!-- image3 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children1.JPG' %}">
+          <img src="{% static 'images/children1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children's day celebration</p>
+      </div>
+    </div>
+
+    <!-- image4 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/children2.JPG' %}">
+          <img src="{% static 'images/children2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Children's day celebration</p>
+      </div>
+    </div>
+
+    <!-- image5 -->
+
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/passion1.JPG' %}">
+          <img src="{% static 'images/passion1.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Passion of Christ Celebration</p>
+      </div>
+    </div>
+
+    <!-- image6 -->
+    <div class="g-card">
+      <div class="card-img">
+        <a href="{% static 'images/passion2.JPG' %}">
+          <img src="{% static 'images/passion2.JPG' %}" alt="" />
+        </a>
+      </div>
+      <div class="card-text">
+        <p>Passion of Christ Celebration</p>
+      </div>
+    </div>
+    <!-- end of brief-gallery -->
+  </div>
+
+  <div class="gallery-button">
+    <a href="{% url 'core:gallery' %}">More Pictures</a>
+  </div>
+</div>
+
+{% endblock %}

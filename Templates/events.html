@@ -1,0 +1,72 @@
+{% extends 'layout.html' %} {% load static %}
+<!-- loading static -->
+{% block title %}
+<title>Events Page</title>
+{% endblock %} {% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}" />
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+{% endblock %}
+
+<!-- welcome block -->
+{% block welcome %} Events {% endblock %}
+<!-- welome-alt -->
+{% block welcome-alt %} Events {% endblock %}
+<!-- begining content -->
+{% block content %}
+<div class="events">
+  <div class="events-con">
+    <div class="con-text">
+      <h2>Ordination</h2>
+      <h6>3rd June, 2023</h6>
+      <p>
+        There shall be Ordination in the Parish. The Auxilary bishop of Calabar Archdiocese will be Concencrated
+        late this year, the date and shedule of activities shall be communicated 
+        to us as they unfold. We therefore solicit for funds to carry out thi special occassion
+      </p>
+    </div>
+    <div class="con-img">
+      <a href="{% static 'images/ordination2.JPG' %}">
+        <img src="{% static 'images/ordination2.JPG' %}" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <!-- event2 -->
+
+  <div class="events-con">
+    <div class="con-text">
+      <h2>Women Talent</h2>
+      <h6>17th June, 2023</h6>
+      <p>
+        There shall be women talent in the parish on the 17th June, 2023.
+        We are encouraged to prepare ourselves to heavily support our women
+        and mothers as they celebrate their Talent day.
+      </p>
+    </div>
+    <div class="con-img">
+      <a href="{% static 'images/children1.JPG' %}">
+        <img src="{% static 'images/children1.JPG' %}" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <!-- event3 -->
+
+  <div class="events-con">
+    <div class="con-text">
+      <h2>Harvest</h2>
+      <h6>17th October, 2023</h6>
+      <p>
+        There shall be Harvest and Thanksgiving as stipulated above
+        its a special event in the life our parish, especially as we
+        thank God for the gift of live, good health and many favours.
+      </p>
+    </div>
+    <div class="con-img">
+      <a href="{% static 'images/choir2.JPG' %}">
+        <img src="{% static 'images/choir2.JPG' %}" alt="" />
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

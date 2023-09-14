@@ -1,0 +1,23 @@
+.my-style {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 4px solid rgba(0, 128, 0, 0.695);
+}
+
+.my-style img {
+  width: 100%;
+}
+
+/* responsiveness */
+@media screen and (max-width: 850px) {
+}
+
+/* for 400px screens */
+@media screen and (max-width: 400px) {
+  .my-style {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
